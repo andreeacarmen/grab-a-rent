@@ -32,7 +32,6 @@ class UserRestController {
 
     @CrossOrigin(origins = "http://localhost:3000")
     @RequestMapping(method = RequestMethod.GET)
-
     List<User> allUsers() {
         return this.userRepository.findAllByOrderByIdAsc();
     }
