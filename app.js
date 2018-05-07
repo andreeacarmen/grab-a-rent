@@ -6,9 +6,7 @@ myApp.config(function($routeProvider) {
 
     $routeProvider
         .when('/', {
-            templateUrl : 'view/home.html',
-            controllerAs: 'homeController',
-            controller: 'homeController'
+            templateUrl : 'view/homePage.html',
         })
         .when('/home', {
             templateUrl : 'view/home.html',

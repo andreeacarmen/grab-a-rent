@@ -38,6 +38,33 @@ p {
     font-size: 20px;
 }
 
+.searchButton {
+    background-color: #6666FF; /* Blue */
+    border: none;
+    color: whitesmoke;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 19px;
+    position: absolute;
+    top: 350px;
+    left: 450px;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+}
+.addButton {
+    background-color: #6666FF; /* Blue */
+    border: none;
+    color: whitesmoke;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 30px;
+    position: absolute;
+    border-radius: 50%;
+}
 /*Switch on off*/
 .onoffswitch {
     position: relative; width: 90px;
@@ -148,5 +175,5 @@ p {
 }
 
 .btn .btn-primary {
-    margin-bottom : 2 cm;
+    margin-bottom : 10px;
 }

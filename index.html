@@ -19,6 +19,7 @@
 
     <script src="app.js"></script>
     <script src="/controller/homeController.js"></script>
+    <script src="/controller/addPropertyController.js"></script>
     <script src="/controller/signUpController.js"></script>
     <script src="/controller/loginController.js"></script>
     <script src="/controller/editController.js"></script>
@@ -39,10 +40,8 @@
         </div>
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-                <li><a href="#">Browse Properties</a></li>
-
+                <a href="#/addProperty" class="addButton">+</a>
             </ul>
-            <a href="#/addProperty" class="btn btn-success">Adaugă o nouă proprietate</a>
 
             <form class="navbar-form navbar-right" role="search" ng-if="!login.isLoggedin">
                 <div class="form-group">
@@ -61,7 +60,6 @@
                 </ul>
             </div>
 
-        </div>
     </div>
 </div>
 
