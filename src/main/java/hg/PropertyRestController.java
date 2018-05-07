@@ -31,6 +31,17 @@ public class PropertyRestController {
     }
 
     @CrossOrigin(origins = "http://localhost:3000")
+    @RequestMapping(method = RequestMethod.GET,
+            value = "/filter")
+    @ResponseBody
+    List<Property> getFilteredProperties(@RequestParam(value = "price", required = false) double price,
+                                         @RequestParam(value = "lvl", required = false) int lvl,
+                                         @RequestParam(value = "constructionYear", required = false) int constructionYear,
+                                         @RequestParam(value = "propType", required = false) String propType) {
+        return this.propertyRepository.findPropertyByPriceAndLvlAndPropTypeAndConstructionYear(price, lvl, propType, constructionYear);
+    }
+
+    @CrossOrigin(origins = "http://localhost:3000")
     @RequestMapping(method = RequestMethod.POST,
             value = "/new",
             headers="Accept=application/json",
