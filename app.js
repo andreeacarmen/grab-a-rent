@@ -25,6 +25,11 @@ myApp.config(function($routeProvider) {
             controllerAs: 'signUp',
             controller  : 'signUpController'
         })
+        .when('/addProperty', {
+            templateUrl : 'view/addProperty.html',
+            controllerAs: 'addProperty',
+            controller  : 'addPropertyController'
+        })
         .when('/contact',{
             templateUrl: 'view/contact.html'
         })
