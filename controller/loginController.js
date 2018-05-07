@@ -13,8 +13,6 @@
             };
 
             self.login = function(){
-                //console.log($scope.username);
-                //console.log($scope.password);
                 var endpoint = 'http://localhost:8080/users/login';
                 self.data = {
                     "username": $scope.username,
