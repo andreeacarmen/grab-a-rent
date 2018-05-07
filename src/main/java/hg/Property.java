@@ -14,6 +14,7 @@ public class Property {
     @GeneratedValue
     private Long id;
 
+    private String propertyName;
     private String propType;
     private double mp;
     private double price;
@@ -22,12 +23,17 @@ public class Property {
     private boolean furniture;
     private int constructionYear;
     private int lvl;
-    private int type;
+    private int roomNr;
+    private String description;
     private ArrayList<String> facilities;
 
+    public Property() {
+    }
 
-    public Property(Long id, String propType, double mp, double price, double lat, double lg, boolean furniture, int constructionYear, int lvl, ArrayList<String> facilities) {
+
+    public Property(Long id, String propertyName, String propType, double mp, double price, double lat, double lg, boolean furniture, int constructionYear, int lvl, int roomNr, String description, ArrayList<String> facilities) {
         this.id = id;
+        this.propertyName = propertyName;
         this.propType = propType;
         this.mp = mp;
         this.price = price;
@@ -36,7 +42,17 @@ public class Property {
         this.furniture = furniture;
         this.constructionYear = constructionYear;
         this.lvl = lvl;
+        this.roomNr = roomNr;
+        this.description = description;
         this.facilities = facilities;
+    }
+
+    public String getPropertyName() {
+        return propertyName;
+    }
+
+    public void setPropertyName(String propertyName) {
+        this.propertyName = propertyName;
     }
 
     public Long getId() {
@@ -111,12 +127,12 @@ public class Property {
         this.lvl = lvl;
     }
 
-    public int getType() {
-        return type;
+    public int getRoomNr() {
+        return roomNr;
     }
 
-    public void setType(int type) {
-        this.type = type;
+    public void setRoomNr(int roomNr) {
+        this.roomNr = roomNr;
     }
 
     public ArrayList<String> getFacilities() {
@@ -125,5 +141,13 @@ public class Property {
 
     public void setFacilities(ArrayList<String> facilities) {
         this.facilities = facilities;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 }

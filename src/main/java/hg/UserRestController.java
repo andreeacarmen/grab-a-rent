@@ -51,7 +51,7 @@ class UserRestController {
                             userBuilder.name = user.getName();
                             userBuilder.password = user.getPassword();
                             userBuilder.email = user.getEmail();
-                            userBuilder.location = user.getEmail();
+                            userBuilder.location = user.getLocation();
                             userBuilder.telefonNr = user.getTelefonNr();
                         }). createUser()
                 );

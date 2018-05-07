@@ -5,6 +5,7 @@ import java.util.function.Consumer;
 
 public class PropertyBuilder {
     public Long id;
+    public String propertyName;
     public String propType;
     public double mp;
     public double price;
@@ -13,11 +14,13 @@ public class PropertyBuilder {
     public boolean furniture;
     public int constructionYear;
     public int lvl;
+    public int roomNr;
+    public String description;
     public ArrayList<String> facilities;
 
 
     public Property createProperty() {
-        return new Property(id, propType, mp, price, lat, lg, furniture, constructionYear, lvl, facilities);
+        return new Property(id, propertyName, propType, mp, price, lat, lg, furniture, constructionYear, lvl, roomNr, description, facilities);
     }
 
     public PropertyBuilder with (Consumer<PropertyBuilder> builderFunction) {
