@@ -24,7 +24,9 @@
                         <select ng-model="propType" id="inputPropType">
                             <option value="decomandat">Decomandat</option>
                             <option value="semidecomandat">Semidecomandat</option>
-                            <option value="semidecomandat">Nedecomandat</option>
+                            <option value="nedecomandat">Nedecomandat</option>
+                            <option value="vagon">Vagon</option>
+                            <option value="circular">Circular</option>
                         </select>
                     </div>
                     <div class="form-group">
@@ -42,9 +44,9 @@
                     <div>
                         <label for="inputFurniture">Mobilat</label>
                         <select ng-model="furniture" id="inputFurniture">
-
                         <option value="true">Da</option>
-                        <option value="false">Nu</option></select>
+                        <option value="false">Nu</option>
+                        </select>
                     </div>
                     <div ng-model="constructionYear">
                         <label for="inputConstructionYear">An construcție</label>
@@ -55,8 +57,19 @@
                         <input type="number" class="form-control" id="inputLvl" ng-model='lvl'>
                     </div>
                     <div ng-model="roomNr">
-                        <label for="inputRoomNr">An construcție</label>
-                        <input type="number" class="form-control" id="inputRoomNr" ng-model='roomNr'>
+                        <label for="inputRoomNr">Număr camere</label>
+                        <select ng-model="roomNr" id="inputRoomNr">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4+">4+</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="inputImages">Adaugă o imagine</label>
+                        <form action="/action_page.php">
+                            <input type="file" name="pic" accept="image/*" id="inputImages">
+                        </form>
                     </div>
                 </div>
             </div>
