@@ -91,7 +91,7 @@ class UserRestController {
             value = "/login",
             headers="Accept=application/json",
             consumes="*/*")
-    public UUID auth(@RequestBody Credentials cred){
+    public Long auth(@RequestBody Credentials cred){
         String email = cred.email;
         String password = cred.password;
 
@@ -104,9 +104,9 @@ class UserRestController {
             System.out.println("null");
             return null;
         } else {
-            UUID uuid =  UUID.randomUUID();
-            System.out.println(uuid);
-            return uuid;
+           /* UUID uuid =  UUID.randomUUID();
+            System.out.println(uuid);*/
+            return user.getId();
         }
     }
 

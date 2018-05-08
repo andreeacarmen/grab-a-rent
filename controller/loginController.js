@@ -6,7 +6,9 @@
         var loginController = function($scope, $rootScope, utilService, $location, $cookies){
             var self = this;
 
-            self.isLoggedin = false;
+            self.init = function(){
+                self.isLoggedin = utilService.isLoggedin;
+            };
 
             self.logout = function(){
                 self.isLoggedin = false;
@@ -28,6 +30,7 @@
                     if(response.data == ""){
                         self.isLoggedin = false;
                     } else {
+                        utilService.userId = response.data;
                         self.isLoggedin = true;
                         self.email = $scope.email;
                         console.log("succes " + response.data);

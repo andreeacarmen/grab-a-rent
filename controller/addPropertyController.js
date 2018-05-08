@@ -83,6 +83,7 @@
                 var lng = self.places[0].geometry.location.lng();
                 var endpoint = 'http://localhost:8080/properties/new';
                 self.data = {
+                    "userId": utilService.userId,
                     "propertyName": $scope.propertyName,
                     "propType": $scope.propType,
                     "description": $scope.description,

@@ -60,6 +60,7 @@ public class PropertyRestController {
                             propertyBuilder.lg = property.getLg();
                             propertyBuilder.constructionYear = property.getConstructionYear();
                             propertyBuilder.facilities = property.getFacilities();
+                            propertyBuilder.userId = property.getUserId();
                         }). createProperty()
         );
 

@@ -3,7 +3,7 @@
         var inject = ['$http'];
         var utilService = function($http){
             var self = this;
-            var email;
+            var userId = 0;
             self.isLoggedin = false;
 
             self.makeGETReq = function(endpoint) {

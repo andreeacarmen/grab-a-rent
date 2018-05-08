@@ -33,6 +33,7 @@ public class Application {
                         propertyBuilder.lat =44.426767;
                         propertyBuilder.lg = 26.102538;
                         propertyBuilder.constructionYear = 2017;
+                        propertyBuilder.userId = new Long(1);
                     }). createProperty());
             add(new PropertyBuilder()
                     .with( propertyBuilder ->  {
@@ -46,6 +47,7 @@ public class Application {
                         propertyBuilder.lat =44.436767;
                         propertyBuilder.lg = 26.102538;
                         propertyBuilder.facilities = new ArrayList<>(Arrays.asList("incalzire", "balcon"));
+                        propertyBuilder.userId = new Long(1);
                     }). createProperty());
         }
     };
