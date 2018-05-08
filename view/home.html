@@ -10,7 +10,7 @@
     }
 
     body {
-        background-color: #EBF8FE;
+        background-color: white;
     }
 
     #map_wrapper {
@@ -30,27 +30,22 @@
 </div>
 <div class = body>
     <div class="container">
-        <div class="row" >
-            <h1>Properties</h1>
-        </div>
-        <div class="row" style="padding-top: 20px">
+        <div class="row col-sm-7" style="padding-top: 20px">
             <div class="form-group row">
-                <label for="example-text-input" class="col-xs-2 col-form-label">Search for: </label>
-                <div class="col-xs-10">
-                    <input class="form-control" roomNr="text" value="" ng-model="locationSearchText">
+                <input class="form-control" type="text" value="" placeholder="Introduceți adresa" ng-model="locationSearchText">
+            </div>
+            <div id="map_wrapper">
+                <div id="map_canvas" class="mapping"></div>
+            </div>
+        </div>
+        <div class="row col-sm-5" style="padding-top: 20px">
+            <div class="text" style="padding-left: 43px;border-style:none; text-align: left;" ng-repeat="property in homeController.data | filter:locationSearchText">
+                <div class="row">
+                    {{property.propertyName}}
                 </div>
             </div>
         </div>
 
-        <div id="map_wrapper">
-            <div id="map_canvas" class="mapping"></div>
-        </div>
-
-        <div class="col-xs-12 col-sm-6" style="padding-left: 43px;border-style:none" ng-repeat="property in homeController.data | filter:locationSearchText">
-            <div class="row">
-                {{property.propertyName}}
-            </div>
-        </div>
     </div>
 </div>
 

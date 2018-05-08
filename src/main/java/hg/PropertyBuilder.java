@@ -17,10 +17,17 @@ public class PropertyBuilder {
     public int roomNr;
     public String description;
     public ArrayList<String> facilities;
+    public String address;
+    public ArrayList<String> utilities;
+    public String state;
+    public String heating;
+    public Long userId;
+    public String pictureURL;
 
 
     public Property createProperty() {
-        return new Property(id, propertyName, propType, mp, price, lat, lg, furniture, constructionYear, lvl, roomNr, description, facilities);
+        return new Property(id, propertyName, propType, mp, price, lat, lg, furniture, constructionYear, lvl, roomNr, description, facilities,
+        address,utilities,state,heating,userId, pictureURL);
     }
 
     public PropertyBuilder with (Consumer<PropertyBuilder> builderFunction) {

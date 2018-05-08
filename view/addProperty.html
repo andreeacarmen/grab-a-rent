@@ -12,9 +12,10 @@
     <div class="row row-content text-data">
         <form ng-submit="submit()">
 
-            <div id="general-form" class="row row-content">
+            <div class="row row-content col-sm-3"> </div>
+            <div id="general-form" class="row row-content col-sm-6">
                 <legend>Adăugare anunț</legend>
-                <div class="form-group col-xs-12 col-md-6">
+                <div class="form-group">
                     <div class="form-group">
                         <label for="inputName">Nume</label>
                         <input type="text" class="form-control" id="inputName" ng-model='name'>
@@ -71,13 +72,12 @@
                             <input type="file" name="pic" accept="image/*" id="inputImages">
                         </form>
                     </div>
-
+                    <div align="center" class="row">
+                        <input type="submit" id="addProperty" value="Adaugă proprietate" class="btn btn-success" onclick="">
+                    </div>
                 </div>
             </div>
-
-            <div align="center" class="row">
-                <input type="submit" id="submit" value="Submit" class="btn btn-primary" onclick="">
-            </div>
+            <div class="row row-content col-sm-3"> </div>
         </form>
     </div>
 </div>

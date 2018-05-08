@@ -2,7 +2,7 @@
 <html >
 
 <head>
-    <title>HappyGuide</title>
+    <title>Grab a rent</title>
 </head>
 
 <body ng-app='Grab a rent'>
@@ -11,40 +11,46 @@
     <br><br>
     <div class="row row-content text-data">
         <form ng-submit="submit()">
-
-            <div id="general-form" class="row row-content">
-                <legend>Personal Information</legend>
-                <div class="form-group col-xs-12 col-md-6">
-                    <div class="form-group">
-                        <label for="inputName">Full name</label>
+            <div class="row row-content col-sm-3"> </div>
+            <div id="general-form" class="row row-content col-sm-6">
+                <legend>Informații personale</legend>
+                <div class="form-group">
+                    <div class="form-group ">
+                        <label for="inputName">Nume</label>
                         <input roomNr="text" class="form-control" id="inputName" ng-model='name'>
                     </div>
                     <div class="form-group">
-                        <label for="inputEmail">Email address</label>
+                        <label for="inputEmail">Adresă de email</label>
                         <input roomNr="text" class="form-control" id="inputEmail" aria-describedby="emailHelp" ng-model='email'>
-                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                        <small id="emailHelp" class="form-text text-muted">Nu va fi vizibilă.</small>
                     </div>
                     <div class="form-group">
-                        <label for="inputCity">City</label>
+                        <label for="inputCity">Oraș</label>
                         <input roomNr="text" class="form-control" id="inputCity" ng-model='city'>
                     </div>
-                </div>
-                <div class="form-group col-xs-12 col-md-6">
                     <div class="form-group">
-                        <label for="inputUser">User name</label>
+                        <label for="inputUser">Nume de utilizator</label>
                         <input roomNr="text" class="form-control" id="inputUser" ng-model='user'>
                     </div>
                     <div class="form-group">
-                        <label for="inputPassword">Password</label>
+                        <label for="inputPassword">Parolă</label>
                         <input roomNr="password" class="form-control" aria-describedby="passwordHelp" id="inputPassword" ng-model='password'>
-                        <small id="passwordHelp" class="form-text text-muted">Be sure to use a strong password.</small>
+                        <small id="passwordHelp" class="form-text text-muted">Asigurați-vă că parola este una puternică.</small>
                     </div>
+                    <div align="center" class="row">
+                        <input type="submit" id="register" value="Creează cont" class="btn btn-success">
+                    </div>
+                    <script type="text/javascript">
+                        document.getElementById("register").onclick = function () {
+                            location.href = "#/";
+                        };
+                        document.getElementById("addProperty").onclick = function () {
+                            location.href = "#/";
+                        };
+                    </script>
                 </div>
             </div>
-
-            <div align="center" class="row">
-                <input roomNr="submit" id="submit" value="Submit" class="btn btn-primary" onclick="">
-            </div>
+            <div class="row row-content col-sm-3"> </div>
         </form>
     </div>
 </div>
