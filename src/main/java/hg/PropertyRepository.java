@@ -9,5 +9,5 @@ import java.util.List;
  */
 public interface PropertyRepository extends JpaRepository <Property, Long> {
     List<Property> findPropertyByPriceAndLvlAndPropTypeAndConstructionYear(double price, int lvl, String PropType, int constructionYear);
-
+    List<Property> findPropertyByUserId(Long id);
 }

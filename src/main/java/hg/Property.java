@@ -2,6 +2,7 @@ package hg;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.JoinColumn;
 import java.net.URL;
 import java.util.ArrayList;
 
@@ -31,6 +32,7 @@ public class Property {
     private ArrayList<String> utilities;
     private String state;
     private String heating;
+
     private Long userId;
     private String pictureURL;
 

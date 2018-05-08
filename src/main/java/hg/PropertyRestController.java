@@ -56,23 +56,26 @@ public class PropertyRestController {
                             propertyBuilder.propType = property.getPropType();
                             propertyBuilder.lvl = property.getLvl();
                             propertyBuilder.mp = property.getMp();
+                            propertyBuilder.lat = property.getLat();
+                            propertyBuilder.lg = property.getLg();
                             propertyBuilder.constructionYear = property.getConstructionYear();
                             propertyBuilder.facilities = property.getFacilities();
                         }). createProperty()
         );
 
         URI location = ServletUriComponentsBuilder
-                .fromCurrentRequest().path("/{id}")
+                .fromCurrentRequest().path("/home")
                 .buildAndExpand(newUser.getId()).toUri();
 
         return ResponseEntity.created(location).build();
 
     }
 
-   /* @RequestMapping(method = RequestMethod.GET,
+    @RequestMapping(method = RequestMethod.GET,
             value = "/{userId}")
-    Property getPropertyByUserId(@PathVariable long userId) {
-
-    }*/
+    @CrossOrigin(origins = "http://localhost:3000")
+    List<Property> getPropertyByUserId(@PathVariable Long userId) {
+        return this.propertyRepository.findPropertyByUserId(userId);
+    }
 
 }

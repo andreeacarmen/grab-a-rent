@@ -16,13 +16,13 @@
                 self.data = {
                     "location": $scope.city,
                     "email": $scope.email,
-                    "telefonNr": null,
                     "name": $scope.name,
                     "password": $scope.password
                 };
 
                 utilService.makePOSTReq(endpoint,self.data).then(function success(response){
                     console.log(response.data);
+                    utilService.isLoggedin = true;
                 });
 
                 window.location.replace("#/home");

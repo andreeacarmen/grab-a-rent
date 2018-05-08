@@ -4,11 +4,7 @@
         var utilService = function($http){
             var self = this;
             var email;
-
-            self.houseLocation = {
-                lat: 34.0522,
-                lon: -118.2437
-            };
+            self.isLoggedin = false;
 
             self.makeGETReq = function(endpoint) {
                 return $http({method: 'GET', url: endpoint});
