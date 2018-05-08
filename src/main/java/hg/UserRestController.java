@@ -24,10 +24,10 @@ class UserRestController {
 
     @CrossOrigin(origins = "http://localhost:3000")
     @RequestMapping(method = RequestMethod.GET,
-                    value = "/{userName}")
-    User userDetails(@PathVariable String userName) {
-        this.validateUser(userName);
-        return this.userRepository.findByUsername(userName);
+                    value = "/{userId}")
+    User userDetails(@PathVariable Long userId) {
+        this.validateUser(userId);
+        return this.userRepository.findById(userId);
     }
 
     @CrossOrigin(origins = "http://localhost:3000")
@@ -47,7 +47,6 @@ class UserRestController {
         User newUser = userRepository.save(
                 new UserBuilder()
                         .with( userBuilder ->  {
-                            userBuilder.username = user.getUsername();
                             userBuilder.name = user.getName();
                             userBuilder.password = user.getPassword();
                             userBuilder.email = user.getEmail();
@@ -74,11 +73,11 @@ class UserRestController {
             consumes="*/*")
     ResponseEntity<?> edit(@RequestBody User user) {
 
-        User userR = userRepository.findByUsername(user.getUsername());
+        User userR = userRepository.findByEmail(user.getEmail());
         userRepository.delete(userR);
 
         User newUser = userRepository.save(new UserBuilder().createUser());
-        System.out.println(newUser.getUsername());
+        System.out.println(newUser.getEmail());
         URI location = ServletUriComponentsBuilder
                 .fromCurrentRequest().path("/{id}")
                 .buildAndExpand(newUser.getId()).toUri();
@@ -93,14 +92,14 @@ class UserRestController {
             headers="Accept=application/json",
             consumes="*/*")
     public UUID auth(@RequestBody Credentials cred){
-        String userName = cred.username;
+        String email = cred.email;
         String password = cred.password;
 
-        System.out.println("username" + userName + "password " + password);
+        System.out.println("email" + email + "password " + password);
       //  String password = "" + cred.password.hashCode();
 
-        User user = this.userRepository.findByUsername(userName);
-        System.out.println(userName);
+        User user = this.userRepository.findByEmail(email);
+        System.out.println(email);
         if(user == null || user.getPassword().compareTo(cred.password) != 0){
             System.out.println("null");
             return null;
@@ -111,9 +110,9 @@ class UserRestController {
         }
     }
 
-    private void validateUser(String userName) {
-        if(userRepository.findByUsername(userName) == null) {
-            throw new UserNotFoundException(userName);
+    public void validateUser(Long userId) {
+        if(userRepository.findById(userId) == null) {
+            throw new UserNotFoundException(userId);
         }
     }
 }

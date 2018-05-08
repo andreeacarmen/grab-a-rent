@@ -15,11 +15,11 @@
             self.login = function(){
                 var endpoint = 'http://localhost:8080/users/login';
                 self.data = {
-                    "username": $scope.username,
+                    "email": $scope.email,
                     "password": $scope.password
                 };
 
-                utilService.username = $scope.username;
+                utilService.email = $scope.email;
                 //console.log(self.data);
                 utilService.makePOSTReq(endpoint,self.data).then(function success(response){
                     //console.log(self.data);
@@ -29,7 +29,7 @@
                         self.isLoggedin = false;
                     } else {
                         self.isLoggedin = true;
-                        self.username = $scope.username;
+                        self.email = $scope.email;
                         console.log("succes " + response.data);
                         $rootScope.globals = {
                             currentSession: response.data

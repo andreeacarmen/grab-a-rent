@@ -16,15 +16,13 @@ public class User {
     private String email;
     private String telefonNr;
     private String password;
-    private String username;
 
-    public User(String name, String location, String email, String telefonNr, String password, String username) {
+    public User(String name, String location, String email, String telefonNr, String password) {
         this.name = name;
         this.location = location;
         this.email = email;
         this.telefonNr = telefonNr;
         this.password = password;
-        this.username = username;
     }
 
     public Long getId() {
@@ -73,14 +71,6 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
-    }
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
     }
 
 

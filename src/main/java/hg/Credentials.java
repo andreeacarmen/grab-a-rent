@@ -11,14 +11,14 @@ public class Credentials {
 
     private int id;
 
-    public String username;
+    public String email;
     public String password;
 
     public Credentials(){
 
     }
-    public Credentials(String username, String password) {
-        this.username = username;
+    public Credentials(String email, String password) {
+        this.email = email;
         this.password = password;
     }
 }

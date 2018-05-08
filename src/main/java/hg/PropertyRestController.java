@@ -68,4 +68,11 @@ public class PropertyRestController {
         return ResponseEntity.created(location).build();
 
     }
+
+   /* @RequestMapping(method = RequestMethod.GET,
+            value = "/{userId}")
+    Property getPropertyByUserId(@PathVariable long userId) {
+
+    }*/
+
 }

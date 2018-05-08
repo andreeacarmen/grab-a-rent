@@ -14,10 +14,9 @@ public class Application {
     private final ArrayList<User> users = new ArrayList() {
         {
             add(new UserBuilder().with( userBuilder ->  {
-                userBuilder.username = "andreea-c";
+                userBuilder.email = "andreea-carmen@gmail.com";
                 userBuilder.name = "Andreea";
                 userBuilder.password = "parola";
-                userBuilder.email = "andreea@gmail.com";
             }).createUser());
         }
     };

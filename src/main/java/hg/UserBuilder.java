@@ -8,7 +8,6 @@ public class UserBuilder {
     public String email;
     public String telefonNr;
     public String password;
-    public String username;
 
     public UserBuilder with (Consumer<UserBuilder> builderFunction) {
         builderFunction.accept(this);
@@ -16,6 +15,6 @@ public class UserBuilder {
 
 
     public User createUser() {
-        return new User(name, location, email, telefonNr, password, username);
+        return new User(name, location, email, telefonNr, password);
     }
 }

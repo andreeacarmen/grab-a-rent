@@ -18,8 +18,6 @@
                     "email": $scope.email,
                     "telefonNr": null,
                     "name": $scope.name,
-                    "hourRate": $scope.price,
-                    "username": $scope.user,
                     "password": $scope.password
                 };
 

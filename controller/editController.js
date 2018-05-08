@@ -9,10 +9,10 @@
             self.init = function(){
                 utilService.makeGETReq('http://localhost:8080/users').then(function success(response) {
                     self.data = response.data;
-                    var userName = utilService.username;
+                    var email = utilService.email;
                     for (var i = 0, length = self.data.length; i < length; i++) {
                         var user = self.data[i];
-                        if (user.username == userName) {
+                        if (user.email == email) {
                             self.user = user;
                             console.log(self.user);
                         }

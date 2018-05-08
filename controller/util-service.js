@@ -3,7 +3,7 @@
         var inject = ['$http'];
         var utilService = function($http){
             var self = this;
-            var username;
+            var email;
 
             self.houseLocation = {
                 lat: 34.0522,
