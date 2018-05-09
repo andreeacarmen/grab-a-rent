@@ -30,7 +30,7 @@
                     if(response.data == ""){
                         self.isLoggedin = false;
                     } else {
-                        utilService.userId = response.data;
+                        utilService.userId = response.data.id;
                         self.isLoggedin = true;
                         self.email = $scope.email;
                         console.log("succes " + response.data);
