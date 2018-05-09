@@ -30,18 +30,32 @@
 </div>
 <div class = body>
     <div class="container">
-        <div class="row col-sm-7" style="padding-top: 20px">
-            <div class="form-group row">
-                <input class="form-control" type="text" value="" placeholder="Introduceți adresa" ng-model="locationSearchText">
+        <div class="row col-sm-7" style="padding-top: 30px">
+            <div class="form-group row" >
+                <input class="form-control" style="width: 95%; margin-left: 15px; " type="text" value="" placeholder="Introduceți adresa" ng-model="locationSearchText">
             </div>
             <div id="map_wrapper">
                 <div id="map_canvas" class="mapping"></div>
             </div>
         </div>
-        <div class="row col-sm-5" style="padding-top: 20px">
-            <div class="text" style="padding-left: 43px;border-style:none; text-align: left;" ng-repeat="property in homeController.data | filter:locationSearchText">
+        <div class="row col-sm-5">
+            <div class="text" style="padding-left: 65px;border-style:none; text-align: left;" ng-repeat="property in homeController.data | filter:locationSearchText">
+
                 <div class="row">
-                    {{property.propertyName}}
+                    <div class="row">
+                        <b>{{property.propertyName}}</b>
+                    </div>
+                    <div class="row" >
+                    <span style="font-size:15px; display: inline;">
+                            Adresa: {{property.address}}
+                        </span>
+                    </div>
+                    <div class="row">
+                        <span style="font-size:15px; display: inline;">
+                            Pret: {{property.price}}
+                        </span>
+                    </div>
+
                 </div>
             </div>
         </div>

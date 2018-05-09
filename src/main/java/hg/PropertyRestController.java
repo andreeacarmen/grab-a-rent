@@ -52,6 +52,8 @@ public class PropertyRestController {
         Property newUser = propertyRepository.save(
                 new PropertyBuilder()
                         .with( propertyBuilder ->  {
+                            propertyBuilder.propertyName = property.getPropertyName();
+                            propertyBuilder.address = property.getAddress();
                             propertyBuilder.price = property.getPrice();
                             propertyBuilder.propType = property.getPropType();
                             propertyBuilder.lvl = property.getLvl();
@@ -61,6 +63,9 @@ public class PropertyRestController {
                             propertyBuilder.constructionYear = property.getConstructionYear();
                             propertyBuilder.facilities = property.getFacilities();
                             propertyBuilder.userId = property.getUserId();
+                            propertyBuilder.description = property.getDescription();
+                            propertyBuilder.furniture = property.isFurniture();
+                            propertyBuilder.heating = property.getHeating();
                         }). createProperty()
         );
 

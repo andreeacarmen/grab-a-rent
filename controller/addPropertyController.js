@@ -79,6 +79,7 @@
             $scope.submit = function() {
 
                 console.log(self.places);
+                var address = self.places[0].formatted_address;
                 var lat = self.places[0].geometry.location.lat();
                 var lng = self.places[0].geometry.location.lng();
                 var endpoint = 'http://localhost:8080/properties/new';
@@ -95,7 +96,8 @@
                     "constructionYear": $scope.constructionYear,
                     "lvl": $scope.lvl,
                     "roomNr": $scope.roomNr,
-                    "facilities": $scope.facilities
+                    "facilities": $scope.facilities,
+                    "address": address
                 };
 
                 utilService.makePOSTReq(endpoint,self.data).then(function success(response){
