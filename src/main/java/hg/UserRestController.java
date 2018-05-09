@@ -8,7 +8,6 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import java.net.URI;
 import java.util.List;
-import java.util.UUID;
 
 @RestController
 @RequestMapping("/users")
@@ -91,7 +90,7 @@ class UserRestController {
             value = "/login",
             headers="Accept=application/json",
             consumes="*/*")
-    public Long auth(@RequestBody Credentials cred){
+    public User auth(@RequestBody Credentials cred){
         String email = cred.email;
         String password = cred.password;
 
@@ -106,7 +105,7 @@ class UserRestController {
         } else {
            /* UUID uuid =  UUID.randomUUID();
             System.out.println(uuid);*/
-            return user.getId();
+            return user;
         }
     }
 
