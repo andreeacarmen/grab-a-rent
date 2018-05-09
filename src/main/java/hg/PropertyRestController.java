@@ -60,9 +60,12 @@ public class PropertyRestController {
                             propertyBuilder.mp = property.getMp();
                             propertyBuilder.lat = property.getLat();
                             propertyBuilder.lg = property.getLg();
+                            propertyBuilder.state = property.getState();
+                            propertyBuilder.utilities = property.getUtilities();
                             propertyBuilder.constructionYear = property.getConstructionYear();
                             propertyBuilder.facilities = property.getFacilities();
                             propertyBuilder.userId = property.getUserId();
+                            propertyBuilder.roomNr = property.getRoomNr();
                             propertyBuilder.description = property.getDescription();
                             propertyBuilder.furniture = property.isFurniture();
                             propertyBuilder.heating = property.getHeating();
