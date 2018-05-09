@@ -18,7 +18,7 @@ public class PropertyBuilder {
     public String description;
     public ArrayList<String> facilities;
     public String address;
-    public ArrayList<String> utilities;
+    public String utilities;
     public String state;
     public String heating;
     public Long userId;

@@ -29,9 +29,13 @@ public class Application {
                         propertyBuilder.price = 350;
                         propertyBuilder.propType = "Decomandat";
                         propertyBuilder.lvl = 1;
+                        propertyBuilder.state = "decomandat";
+                        propertyBuilder.address = "Strada Petalelor, Bucuresti";
                         propertyBuilder.mp = 70;
                         propertyBuilder.lat =44.426767;
                         propertyBuilder.lg = 26.102538;
+                        propertyBuilder.utilities = "neutilat";
+                        propertyBuilder.heating = "system";
                         propertyBuilder.constructionYear = 2017;
                         propertyBuilder.userId = new Long(1);
                     }). createProperty());
@@ -42,6 +46,10 @@ public class Application {
                         propertyBuilder.propType = "Semidecomandat";
                         propertyBuilder.lvl = 1;
                         propertyBuilder.mp = 70;
+                        propertyBuilder.state = "semidecomandat";
+                        propertyBuilder.address = "Strada Verzelor, Bucuresti";
+                        propertyBuilder.utilities = "partial";
+                        propertyBuilder.heating = "own";
                         propertyBuilder.constructionYear = 2018;
                         propertyBuilder.roomNr = 2;
                         propertyBuilder.lat =44.436767;

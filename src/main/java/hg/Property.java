@@ -29,7 +29,7 @@ public class Property {
     private String description;
     private ArrayList<String> facilities;
     private String address;
-    private ArrayList<String> utilities;
+    private String utilities;
     private String state;
     private String heating;
 
@@ -41,7 +41,7 @@ public class Property {
 
 
     public Property(Long id, String propertyName, String propType, double mp, double price, double lat, double lg, boolean furniture, int constructionYear, int lvl, int roomNr, String description,
-                    ArrayList<String> facilities, String address, ArrayList<String> utilities, String state, String heating, Long userId,String pictureURL) {
+                    ArrayList<String> facilities, String address, String utilities, String state, String heating, Long userId, String pictureURL) {
         this.id = id;
         this.propertyName = propertyName;
         this.propType = propType;
@@ -167,13 +167,6 @@ public class Property {
         this.description = description;
     }
 
-    public ArrayList<String> getUtilities() {
-        return utilities;
-    }
-
-    public void setUtilities(ArrayList<String> utilities) {
-        this.utilities = utilities;
-    }
 
     public String getAddress() {
         return address;
@@ -211,5 +204,13 @@ public class Property {
 
     public void setPictureURL(String pictureURL) {
         this.pictureURL = pictureURL;
+    }
+
+    public String getUtilities() {
+        return utilities;
+    }
+
+    public void setUtilities(String utilities) {
+        this.utilities = utilities;
     }
 }
