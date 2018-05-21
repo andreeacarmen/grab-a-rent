@@ -31,6 +31,11 @@ myApp.config(function($routeProvider) {
         .when('/contact',{
             templateUrl: 'view/contact.html'
         })
+        .when('/properties/:id',{
+            templateUrl: 'view/property.html',
+            controllerAs: 'propertyController',
+            controller: 'propertyController'
+        })
 
 });
 
