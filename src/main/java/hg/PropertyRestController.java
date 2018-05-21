@@ -87,4 +87,11 @@ public class PropertyRestController {
         return this.propertyRepository.findPropertyByUserId(userId);
     }
 
+    @RequestMapping(method = RequestMethod.GET,
+            value = "/{propertyId}")
+    @CrossOrigin(origins = "http://localhost:3000")
+    List<Property> getPropertyDetails(@PathVariable Long id) {
+        return this.propertyRepository.findPropertyById(id);
+    }
+
 }
