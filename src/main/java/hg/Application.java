@@ -37,6 +37,7 @@ public class Application {
                         propertyBuilder.utilities = "neutilat";
                         propertyBuilder.heating = "system";
                         propertyBuilder.constructionYear = 2017;
+                        propertyBuilder.pictureURL = "prop_img1.jpg";
                         propertyBuilder.userId = new Long(1);
                     }). createProperty());
             add(new PropertyBuilder()
@@ -54,6 +55,7 @@ public class Application {
                         propertyBuilder.roomNr = 2;
                         propertyBuilder.lat =44.436767;
                         propertyBuilder.lg = 26.102538;
+                        propertyBuilder.pictureURL = "prop_img2.jpg";
                         propertyBuilder.facilities = new ArrayList<>(Arrays.asList("incalzire", "balcon"));
                         propertyBuilder.userId = new Long(1);
                     }). createProperty());

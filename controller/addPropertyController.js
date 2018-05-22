@@ -97,6 +97,7 @@
                     "lvl": $scope.lvl,
                     "roomNr": $scope.roomNr,
                     "facilities": $scope.facilities,
+                    "pictureURL": $scope.pictureURL,
                     "address": address
                 };
 

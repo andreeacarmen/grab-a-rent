@@ -7,6 +7,53 @@
 
 <div ng-controller="propertyController as login" ng-init="login.init()">
     </div>
+    <div class="row">
+        <b>{{viewPropertyController.propertyName}}</b>
+    </div>
+
+    <div class="row">
+        <img class="w3-image" src={{viewPropertyController.pictureURL}} width="100%" height="100%">
+    </div>
+    <div class="row">
+        <b>{{viewPropertyController.address}}</b>
+    </div>
+    <div class="row">
+        <b> Pret: {{viewPropertyController.price}}</b>
+    </div>
+    <div class="row">
+        <b>{{viewPropertyController.propType}}</b>
+    </div>
+    <div class="row">
+        <b>Suprafata: {{viewPropertyController.mp}}</b>
+    </div>
+    <div class="row">
+        <b>Mobilat: {{viewPropertyController.furniture}}</b>
+    </div>
+    <div class="row">
+        <b>Anul constructiei: {{viewPropertyController.constructionYear}}</b>
+    </div>
+    <div class="row">
+        <b>Etaj: {{viewPropertyController.lvl}}</b>
+    </div>
+    <div class="row">
+        <b>Numarul de camere: {{viewPropertyController.roomNr}}</b>
+    </div>
+    <div class="row">
+        <b>Descriere: {{viewPropertyController.description}}</b>
+    </div>
+    <div class="row">
+        <b>{{viewPropertyController.utilities}}</b>
+    </div>
+    <div class="row">
+        <b>{{viewPropertyController.facilities}}</b>
+    </div>
+    <div class="row">
+        <b>{{viewPropertyController.state}}</b>
+    </div>
+    <div class="row">
+        <b>{{viewPropertyController.heating}}</b>
+    </div>
+
 
 </body>
 </html>

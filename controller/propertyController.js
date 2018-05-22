@@ -26,11 +26,6 @@
                 });
             }
 
-
-            function guideLocate() {
-
-            }
-
         };
 
         propertyController.$inject = inject;
