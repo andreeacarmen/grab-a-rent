@@ -34,7 +34,7 @@ public class Application {
                         propertyBuilder.mp = 70;
                         propertyBuilder.lat =44.426767;
                         propertyBuilder.lg = 26.102538;
-                        propertyBuilder.utilities = "neutilat";
+                        propertyBuilder.utilities = "none";
                         propertyBuilder.heating = "system";
                         propertyBuilder.constructionYear = 2017;
                         propertyBuilder.pictureURL = "prop_img1.jpg";

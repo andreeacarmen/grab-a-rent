@@ -81,17 +81,17 @@ public class PropertyRestController {
     }
 
     @RequestMapping(method = RequestMethod.GET,
-            value = "/{userId}")
+            value = "/user/{userId}")
     @CrossOrigin(origins = "http://localhost:3000")
     List<Property> getPropertyByUserId(@PathVariable Long userId) {
         return this.propertyRepository.findPropertyByUserId(userId);
     }
 
     @RequestMapping(method = RequestMethod.GET,
-            value = "/{propertyId}")
+            value = "/property/{propertyId}")
     @CrossOrigin(origins = "http://localhost:3000")
-    List<Property> getPropertyDetails(@PathVariable Long id) {
-        return this.propertyRepository.findPropertyById(id);
+    List<Property> getPropertyDetails(@PathVariable Long propertyId) {
+        return this.propertyRepository.findPropertyById(propertyId);
     }
 
 }
