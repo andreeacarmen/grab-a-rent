@@ -27,7 +27,7 @@ public class Application {
                     .with( propertyBuilder ->  {
                         propertyBuilder.propertyName = "Apartament LUX";
                         propertyBuilder.price = 350;
-                        propertyBuilder.propType = "Decomandat";
+                        propertyBuilder.propType = "Apartament";
                         propertyBuilder.lvl = 1;
                         propertyBuilder.state = "decomandat";
                         propertyBuilder.address = "Strada Petalelor, Bucuresti";
@@ -39,12 +39,13 @@ public class Application {
                         propertyBuilder.constructionYear = 2017;
                         propertyBuilder.pictureURL = "prop_img1.jpg";
                         propertyBuilder.userId = new Long(1);
+                        propertyBuilder.roomNr = 2;
                     }). createProperty());
             add(new PropertyBuilder()
                     .with( propertyBuilder ->  {
                         propertyBuilder.propertyName = "Apartament zona deosebita";
                         propertyBuilder.price = 350;
-                        propertyBuilder.propType = "Semidecomandat";
+                        propertyBuilder.propType = "Casa";
                         propertyBuilder.lvl = 1;
                         propertyBuilder.mp = 70;
                         propertyBuilder.state = "semidecomandat";

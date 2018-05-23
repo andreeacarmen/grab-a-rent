@@ -43,27 +43,25 @@
 
                 <div class="row">
                     <div class="row">
-                        <a class="col-xs-2" href="#/properties/{{property.id}}" ng-controller="homeController as home">
+                        <a href="#/properties/{{property.id}}" ng-controller="homeController as home">
                         <b>{{property.propertyName}}</b>
                         </a>
                     </div>
+                    <div class="row">
+                        <span style="font-size:15px; display: inline;">
+                            <img class="w3-image" src={{property.pictureURL}} width="80%" height="30%">
+                        </span>
+                    </div>
                     <div class="row" >
-                    <span style="font-size:15px; display: inline;">
-                            Adresa: {{property.address}}
+                        <span style="font-size:15px; display: inline;">
+                            <b>Adresa:</b> {{property.address}}
                         </span>
                     </div>
                     <div class="row">
                         <span style="font-size:15px; display: inline;">
-                            Pret: {{property.price}}
+                            <b>Pret:</b> {{property.price}} EUR
                         </span>
                     </div>
-
-                    <div class="row">
-                        <span style="font-size:15px; display: inline;">
-                            <img class="w3-image" src={{property.pictureURL}} width="50%" height="50%">
-                        </span>
-                    </div>
-
 
                 </div>
             </div>

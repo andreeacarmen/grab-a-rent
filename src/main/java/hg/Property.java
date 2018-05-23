@@ -22,7 +22,7 @@ public class Property {
     private double price;
     private double lat;
     private double lg;
-    private boolean furniture;
+    private String furniture;
     private int constructionYear;
     private int lvl;
     private int roomNr;
@@ -40,7 +40,7 @@ public class Property {
     }
 
 
-    public Property(Long id, String propertyName, String propType, double mp, double price, double lat, double lg, boolean furniture, int constructionYear, int lvl, int roomNr, String description,
+    public Property(Long id, String propertyName, String propType, double mp, double price, double lat, double lg, String furniture, int constructionYear, int lvl, int roomNr, String description,
                     ArrayList<String> facilities, String address, String utilities, String state, String heating, Long userId, String pictureURL) {
         this.id = id;
         this.propertyName = propertyName;
@@ -119,11 +119,11 @@ public class Property {
         this.lg = lg;
     }
 
-    public boolean isFurniture() {
+    public String isFurniture() {
         return furniture;
     }
 
-    public void setFurniture(boolean furniture) {
+    public void setFurniture(String furniture) {
         this.furniture = furniture;
     }
 

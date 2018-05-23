@@ -2,58 +2,101 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>LALA</title>
+    <title>Propietate</title>
+    <style>
+        hr {
+            display: block;
+            height: 1px;
+            width: 70%;
+            border: 0;
+            border-top: 1px solid #ccc;
+            margin: 0em 0;
+            padding: 0;
+        }
+    </style>
 </head>
 
-<div ng-controller="propertyController as login" ng-init="login.init()">
-    </div>
-    <div class="row">
-        <b>{{viewPropertyController.propertyName}}</b>
+<body style="width: 95%">
+<div  style="margin-top: 80px; margin-left: 40px" ng-controller="propertyController as propertyController" ng-init="propertyController.init()">
+
+    <div class="row" >
+         <div class= "col-x3" style="font-size:45px; display: inline;">
+        <b>{{propertyController.data.propertyName}}</b>
+         </div>
+        <div class="col-x3" style="font-size:45px; color: darkseagreen; padding-right: 300px; float:right">
+            <b> {{propertyController.data.price}} EUR</b>
+        </div>
     </div>
 
-    <div class="row">
-        <img class="w3-image" src={{viewPropertyController.pictureURL}} width="100%" height="100%">
+    <div class="row" style="margin-top: 5px">
+        <img src="/resources/home.png" style="float:left;">
+        <div class= "col-x3" style="font-size:15px; color: #5E5E5E; padding: 5px; float:left;">
+            <b>{{propertyController.data.propType}}</b>
+        </div>
+        <img src="/resources/placeholder.png" style="float:right; padding-right: 280px;">
+        <div class= "col-x3" style="font-size:15px; color: #5E5E5E; float:right; padding: 5px;">
+            <b>{{propertyController.data.address}}</b>
+        </div>
     </div>
-    <div class="row">
-        <b>{{viewPropertyController.address}}</b>
-    </div>
-    <div class="row">
-        <b> Pret: {{viewPropertyController.price}}</b>
-    </div>
-    <div class="row">
-        <b>{{viewPropertyController.propType}}</b>
-    </div>
-    <div class="row">
-        <b>Suprafata: {{viewPropertyController.mp}}</b>
-    </div>
-    <div class="row">
-        <b>Mobilat: {{viewPropertyController.furniture}}</b>
-    </div>
-    <div class="row">
-        <b>Anul constructiei: {{viewPropertyController.constructionYear}}</b>
-    </div>
-    <div class="row">
-        <b>Etaj: {{viewPropertyController.lvl}}</b>
-    </div>
-    <div class="row">
-        <b>Numarul de camere: {{viewPropertyController.roomNr}}</b>
-    </div>
-    <div class="row">
-        <b>Descriere: {{viewPropertyController.description}}</b>
-    </div>
-    <div class="row">
-        <b>{{viewPropertyController.utilities}}</b>
-    </div>
-    <div class="row">
-        <b>{{viewPropertyController.facilities}}</b>
-    </div>
-    <div class="row">
-        <b>{{viewPropertyController.state}}</b>
-    </div>
-    <div class="row">
-        <b>{{viewPropertyController.heating}}</b>
+    <div class="row" style="margin-top: 20px">
+        <img class="w3-image" src={{propertyController.data.pictureURL}} width="80%" height="70%">
     </div>
 
+    <div class="row" style="display: table; margin-top: 30px">
 
+        <div class= "col-x2" style="font-size:17px; font-family: sans-serif; font-weight: 3;color: #8D9195; display: inline-grid;">
+                <b>Compartimentare </b>
+        </div>
+        <div class= "col-x2" style="font-size:17px; margin-left: 40px; display: inline-grid;">
+                <b><b>{{propertyController.data.propType}}</b> </b>
+        </div>
+
+        <div class= "col-x2" style="margin-left: 200px; font-size:17px; ont-family: sans-serif; font-weight: 3; color: #8D9195; display: inline-grid;">
+            <b>Suprafata </b>
+        </div>
+        <div class= "col-x2" style="font-size:17px; margin-left: 40px; display: inline-grid;">
+            <b><b>{{propertyController.data.mp}} mp</b> </b>
+        </div>
+    </div>
+
+    <hr/>
+
+    <div class="row" style="display: table; margin-top: 15px">
+
+        <div class= "col-x2" style="font-size:17px; font-family: sans-serif; font-weight: 3;color: #8D9195; display: inline-grid;">
+            <b>Numar camere </b>
+        </div>
+        <div class= "col-x2" style="font-size:17px; margin-left: 40px; display: inline-grid;">
+            <b><b>{{propertyController.data.roomNr}}</b> </b>
+        </div>
+
+        <div class= "col-x2" style="margin-left: 317px; font-size:17px; font-family: sans-serif; font-weight: 3; color: #8D9195; display: inline-grid;">
+            <b>Anul constructiei </b>
+        </div>
+        <div class= "col-x2" style="font-size:17px; margin-left: 40px; display: inline-grid;">
+            <b><b>{{propertyController.data.constructionYear}}</b> </b>
+        </div>
+    </div>
+
+    <hr/>
+
+    <div class="row" style="display: table; margin-top: 15px">
+
+        <div class= "col-x2" style="font-size:17px; font-family: sans-serif; font-weight: 3;color: #8D9195; display: inline-grid;">
+            <b>Etaj </b>
+        </div>
+        <div class= "col-x2" style="font-size:17px; margin-left: 40px; display: inline-grid;">
+            <b><b>{{propertyController.data.lvl}}</b> </b>
+        </div>
+
+        <div class= "col-x2" style="margin-left: 405px; font-size:17px; font-family: sans-serif; font-weight: 3; color: #8D9195; display: inline-grid;">
+            <b>Utilitati </b>
+        </div>
+        <div class= "col-x2" style="font-size:17px; margin-left: 40px; display: inline-grid;">
+            <b><b>{{propertyController.data.utilities}}</b> </b>
+        </div>
+    </div>
+
+</div>
 </body>
 </html>

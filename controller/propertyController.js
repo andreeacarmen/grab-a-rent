@@ -19,9 +19,9 @@
             function getPropertyData(){
                 var propertyId = $routeParams.id;
 
-                var url = 'http://localhost:8080/properties/' + propertyId;
+                var url = 'http://localhost:8080/properties/property/' + propertyId;
                 return utilService.makeGETReq(url).then(function success(response) {
-                    self.data = response.data;
+                    self.data = response.data[0];
                     console.log(self.data);
                 });
             }

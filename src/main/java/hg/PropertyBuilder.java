@@ -11,7 +11,7 @@ public class PropertyBuilder {
     public double price;
     public double lat;
     public double lg;
-    public boolean furniture;
+    public String furniture;
     public int constructionYear;
     public int lvl;
     public int roomNr;
