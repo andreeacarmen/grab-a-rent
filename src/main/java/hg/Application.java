@@ -3,12 +3,14 @@ package hg;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 
 @SpringBootApplication
+@EnableConfigurationProperties(StorageProperties.class)
 public class Application {
 
     private final ArrayList<User> users = new ArrayList() {
@@ -68,11 +70,14 @@ public class Application {
     }
 
     @Bean
-    CommandLineRunner init(UserRepository userRepository, PropertyRepository propertyRepository) {
+    CommandLineRunner init(UserRepository userRepository, PropertyRepository propertyRepository, StorageService storageService) {
 
         properties.forEach(a -> {
             propertyRepository.save(a);
         });
+
+        storageService.init();
+
         return (evt) -> users
                 .forEach(
                         a -> {

@@ -5,6 +5,7 @@
         var inject = ['$scope', 'utilService'];
         var addPropertyController = function($scope, utilService){
             var self = this;
+
             var map;
             var mapOptions = {
                 center: {lat: -33.8688, lng: 151.2195},
@@ -75,6 +76,26 @@
                 });
                 map.fitBounds(bounds);
             });
+
+            $scope.uploadFile = function uploadSingleFile(file) {
+                var formData = new FormData();
+                formData.append("file", file);
+                var endpoint = 'http://localhost:8080/pictures';
+
+                utilService.makePOSTMultipart(endpoint,formData).then(function success(response){
+                    console.log(response.data);
+                });
+
+               /* var xhr = new XMLHttpRequest();
+                xhr.open("POST", "/pictures");
+
+                xhr.onload = function() {
+                    console.log(xhr.responseText);
+                    var response = JSON.parse(xhr.responseText);
+                };
+
+                xhr.send(formData);*/
+            }
 
             $scope.submit = function() {
 

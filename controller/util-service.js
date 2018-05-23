@@ -18,7 +18,14 @@
                     headers: {'Content-Type': 'application/json'}
                 });
             };
-
+            self.makePOSTMultipart = function(endpoint, data) {
+                return $http({
+                    method: 'POST',
+                    url: endpoint,
+                    data: data,
+                    headers: {'Content-Type': 'multipart/form-data; boundary=gc0p4Jq0M2Yt08jU534c0p'}
+                });
+            };
 
             self.makePUTReq = function(endpoint, data) {
                 return $http({

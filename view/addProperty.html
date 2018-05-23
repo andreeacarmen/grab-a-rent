@@ -46,7 +46,7 @@
 <div class="container" style="margin-top: 50px;">
     <br><br>
 
-    <div class="row row-content text-data">
+    <div class="row row-content text-data" ng-controller = "addPropertyController">
 
         <form ng-submit="submit()">
             <div class="row row-content col-sm-3"> </div>
@@ -151,12 +151,15 @@
                         <label for="inputAddress">Adresă</label>
                         <input type="text" class="form-control" id="inputAddress" ng-model='address'>
                     </div>-->
-                    <div>
-                        <label for="inputImages">Adaugă o imagine</label>
-                        <form action="/action_page.php" align="center">
-                            <input  type="file" name="pic" accept="image/*" id="inputImages">
-                        </form>
-                    </div>
+
+                  <!--  <form method="POST" enctype="multipart/form-data" action="/pictures">
+                        <table>
+                            <tr><td>File to upload:</td><td><input type="file" name="file" /></td></tr>
+                            <tr><td></td><td><input type="submit" value="Upload" /></td></tr>
+                        </table>
+                    </form>-->
+
+
                     <div>
                         <label for="pac-input">Adresa</label>
                         <input id="pac-input" class="controls" style="width: 60%" type="text" placeholder="Introdu adresa" ng-model='address'>
@@ -174,6 +177,11 @@
                 </div>
             </div>
             <div class="row row-content col-sm-3"> </div>
+        </form>
+
+        <form id="singleUploadForm" name="singleUploadForm" ng-submit="uploadFile()" enctype="multipart/form-data">
+            <input id="singleFileUploadInput" type="file" name="file" class="file-input" required />
+            <button type="submit" class="primary submit-btn">Submit</button>
         </form>
     </div>
 </div>

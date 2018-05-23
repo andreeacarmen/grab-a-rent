@@ -8,6 +8,7 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import java.net.URI;
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/users")
@@ -24,7 +25,7 @@ class UserRestController {
     @CrossOrigin(origins = "http://localhost:3000")
     @RequestMapping(method = RequestMethod.GET,
                     value = "/{userId}")
-    User userDetails(@PathVariable Long userId) {
+    Optional<User> userDetails(@PathVariable Long userId) {
         this.validateUser(userId);
         return this.userRepository.findById(userId);
     }
