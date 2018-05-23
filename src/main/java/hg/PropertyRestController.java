@@ -90,8 +90,8 @@ public class PropertyRestController {
     @RequestMapping(method = RequestMethod.GET,
             value = "/property/{propertyId}")
     @CrossOrigin(origins = "http://localhost:3000")
-    List<Property> getPropertyDetails(@PathVariable Long id) {
-        return this.propertyRepository.findPropertyById(id);
+    List<Property> getPropertyDetails(@PathVariable Long propertyId) {
+        return this.propertyRepository.findPropertyById(propertyId);
     }
 
 }
